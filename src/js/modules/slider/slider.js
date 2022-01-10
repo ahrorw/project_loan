@@ -6,8 +6,7 @@ export default class Slider {
 		next = null,
 		activeClass = '',
 		animate,
-		autoplay
-	} = {}) {
+		autoplay } = {}) {
 		this.container = document.querySelector(container);
 		try {this.slides = this.container.children;} catch(e){}
 		this.btns = document.querySelectorAll(btns);
