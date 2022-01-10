@@ -34,8 +34,8 @@ export default class MainSlider extends Slider {
 		});
 
 		this.slides[this.slideIndex - 1].style.display = 'block';
-        this.slides[this.slideIndex - 1].classList.add('animated', 'slideInUp');
-	}
+		this.slides[this.slideIndex - 1].classList.add('animated', 'slideInUp'); 
+    }
 
 	plusSlides(n) {
 		this.showSlides(this.slideIndex += n);
@@ -45,6 +45,7 @@ export default class MainSlider extends Slider {
 		this.btns.forEach(item => {
 			item.addEventListener('click', () => {
 				this.plusSlides(1);
+				/* */
 			});
 
 			item.parentNode.previousElementSibling.addEventListener('click', (e) => {
@@ -59,6 +60,7 @@ export default class MainSlider extends Slider {
 				e.stopPropagation();
 				e.preventDefault();
 				this.plusSlides(-1);
+				this.prev.classList.add('animated', 'fadeInRight');
 			});
 		});
 		
@@ -67,6 +69,7 @@ export default class MainSlider extends Slider {
 				e.stopPropagation();
 				e.preventDefault();
 				this.plusSlides(1);
+				this.next.classList.add('animated', 'fadeInLeft');
 			});
 		});
 	}
