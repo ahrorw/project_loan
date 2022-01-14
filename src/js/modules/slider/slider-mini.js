@@ -46,8 +46,7 @@ export default class MiniSlider extends Slider {
 		});
 
 		this.prev.forEach(item => {
-			item.addEventListener('click', () => {
-	
+			item.addEventListener('click', () => {	
 				for (let i = this.slides.length - 1; i > 0; i--) {
 					if (this.slides[i].tagName !== "BUTTON") {
 						let active = this.slides[i];
@@ -96,17 +95,14 @@ export default class MiniSlider extends Slider {
 
 			if (this.autoplay) {
 				this.autoplayGo();
-
 				this.slides[0].parentNode.addEventListener('mouseleave', () => {
 					this.autoplayGo();
 				});
-
 				this.next.forEach(item => {
 					item.addEventListener('mouseleave', () => {
 						this.autoplayGo();
 					});
-				});
-		
+				});		
 				this.prev.forEach(item => {
 					item.addEventListener('mouseleave', () => {
 						this.autoplayGo();
