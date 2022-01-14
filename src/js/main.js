@@ -7,6 +7,7 @@ import ShowInfo from './modules/showInfo';
 import Download from './modules/download';
 
 window.addEventListener('DOMContentLoaded', () => {
+    "use strict";
     const slider = new MainSlider({btns: '.next', container: '.page'});
     slider.render();
     const modulePageSlider = new MainSlider({

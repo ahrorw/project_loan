@@ -66,6 +66,7 @@ export default class VideoPlayer {
             }
         }catch(e){}
     }
+    
     init(){
         if (this.btns.length > 0) {
             const tag = document.createElement('script');

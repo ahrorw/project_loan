@@ -44,8 +44,7 @@ export default class MainSlider extends Slider {
 	bindTriggers() {
 		this.btns.forEach(item => {
 			item.addEventListener('click', () => {
-				this.plusSlides(1);
-				/* */
+				this.plusSlides(1);				
 			});
 
 			item.parentNode.previousElementSibling.addEventListener('click', (e) => {
@@ -78,8 +77,7 @@ export default class MainSlider extends Slider {
 		if (this.container) {
 			try {
 				this.hanson = document.querySelector('.hanson');
-			} catch(e) {}
-			
+			} catch(e) {}			
 			this.showSlides(this.slideIndex);
 			this.bindTriggers();
 		}

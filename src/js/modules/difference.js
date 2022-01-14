@@ -9,6 +9,7 @@ export default class Difference {
             this.newCounter = 0;
         } catch(e){}
     }
+    
     bindTriggers(container, items, counter) {
         container.querySelector('.plus').addEventListener('click', () => {
             if (counter !== items.length - 2) {

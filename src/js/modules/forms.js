@@ -63,7 +63,6 @@ export default class Form {
         }
     
         let inputs = document.querySelectorAll('[name="phone"]');
-    
         inputs.forEach(input => {
             input.addEventListener('input', createMask);
             input.addEventListener('focus', createMask);

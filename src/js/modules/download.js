@@ -3,6 +3,7 @@ export default class Download {
         this.btns = document.querySelectorAll(triggers);
         this.path = 'assets/img/mainbg.jpg';
     }
+    
     downloadItem(path) {
         const element = document.createElement('a');
         element.setAttribute('href', path);
